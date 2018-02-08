@@ -25,7 +25,7 @@ public class Lab07 {
         for (int i = 0; i < length; i++) {
             studentArray[i] = new csestudent();
             
-            System.out.println("please enter student name");
+            System.out.println("please enter student nameeeeeee");
             studentArray[i].name = s.next();
 
             System.out.println("please enter student mark");
