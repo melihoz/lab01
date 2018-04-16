@@ -42,7 +42,7 @@ public class DepthFirstSearch extends AbstractSearch{
             explored.add(current);
             
             if(current.equals(goalNode)){
-                System.out.print(explored);
+                System.out.print("DepthFirst Path: "+explored);
                 System.out.println("Goal node found");
                 return true;
             }

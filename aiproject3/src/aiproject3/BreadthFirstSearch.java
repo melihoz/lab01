@@ -41,7 +41,7 @@ public class BreadthFirstSearch extends AbstractSearch {
             Node current = queue.remove();
             explored.add(current);
             if(current.equals(this.goalNode)) {
-                System.out.println(explored);
+                System.out.println("Breadt First Path: "+explored);
                 return true;
             }            
        for(Edge e : current.adjacencies){

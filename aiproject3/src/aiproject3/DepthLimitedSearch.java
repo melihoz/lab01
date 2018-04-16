@@ -21,8 +21,8 @@ public class DepthLimitedSearch extends AbstractSearch {
    Node startNode;
    Node goalNode;
    int depth = 0;
-   int limit = 7
-           ;
+   int limit = 12;
+           
 
    public DepthLimitedSearch(Node start, Node goalNode){
        super(start, goalNode);
@@ -38,13 +38,13 @@ public class DepthLimitedSearch extends AbstractSearch {
        depth = 0;
 
        while(!nodeStack.isEmpty()){
-           if(depth <= limit) {
+           if(depth < limit) {
                depth++;
                Node current = nodeStack.pop();
                explored.add(current);
                
                if (current.equals(goalNode)) {
-                   System.out.print(explored);
+                   System.out.print("Depth Limited Path at depth "+depth+ ""+explored);
                    System.out.println("Goal node found");
                    return true;}
               for(Edge e : current.adjacencies){
